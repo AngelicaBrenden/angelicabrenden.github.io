@@ -389,6 +389,10 @@
 
         .apps-container {
 
+            display: grid;
+
+            gap: 30px;
+
             max-width: 1000px;
 
             margin: auto;
@@ -522,6 +526,39 @@
 
             box-shadow:
                 0 14px 30px rgba(243, 61, 145, 0.3);
+        }
+
+
+        /* Apper som ikke er ute ennå. Dempet med vilje, så det ikke ser ut
+           som en knapp man kan trykke på. */
+        .status.soon {
+
+            color: #8b7d86;
+        }
+
+
+        .soon-badge {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            margin-top: 22px;
+
+            padding: 13px 26px;
+
+            border-radius: 50px;
+
+            color: #8b7d86;
+
+            font-size: 15px;
+            font-weight: 700;
+
+            background: #faf6f7;
+
+            border: 1px dashed #e3d4da;
         }
 
 
@@ -1255,6 +1292,84 @@
 
                         <li>
                             Share chapters as PDF
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="app-card">
+
+
+                <div class="large-app-icon">
+
+                    <img
+                        src="Reisetips-icon.png"
+                        alt="Reisetips app icon"
+                    >
+
+                </div>
+
+
+
+                <div class="app-info">
+
+                    <h3>
+                        Reisetips
+                    </h3>
+
+
+                    <span class="status soon">
+                        In development
+                    </span>
+
+
+                    <p>
+
+                        Travel tips gathered in one place. Search a city or
+                        browse the world by continent, and get the practical
+                        advice locals actually give &mdash; instead of hunting
+                        through guidebooks and Instagram.
+
+                    </p>
+
+
+                    <span class="soon-badge">
+                        Coming soon to the App Store
+                    </span>
+
+                </div>
+
+
+
+                <div class="app-highlight">
+
+                    <h4>
+                        Travel better.
+                    </h4>
+
+
+                    <ul>
+
+                        <li>
+                            Tips for every destination
+                        </li>
+
+                        <li>
+                            Browse by continent
+                        </li>
+
+                        <li>
+                            See them all on a map
+                        </li>
+
+                        <li>
+                            Save trips for later
                         </li>
 
                     </ul>
