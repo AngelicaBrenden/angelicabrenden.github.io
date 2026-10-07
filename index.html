@@ -280,28 +280,68 @@
         }
 
 
+        /* To ikoner som vifter litt fra hverandre. Ett ikon alene leste som
+           «appen min»; to sier at det er flere, uten å trenge en bildetekst. */
+        .app-stack {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+        }
+
+
         .app-preview {
 
-            width: 280px;
+            width: 230px;
 
-            height: 280px;
+            height: 230px;
 
-            border-radius: 65px;
+            border-radius: 54px;
 
             overflow: hidden;
 
             box-shadow:
                 0 30px 70px rgba(200, 80, 120, 0.25);
 
-            transform: rotate(5deg);
-
             transition: 0.3s;
         }
 
 
-        .app-preview:hover {
+        /* De to lener fra hverandre og overlapper så vidt. Mer overlapp
+           dekket halve StudyScan-ikonet — og det er den som faktisk er ute. */
+        .app-preview.behind {
 
-            transform: rotate(2deg) scale(1.03);
+            margin-right: -26px;
+
+            transform: rotate(-7deg) translateY(14px);
+
+            z-index: 2;
+        }
+
+
+        .app-preview.front {
+
+            transform: rotate(7deg);
+
+            z-index: 1;
+        }
+
+
+        .app-preview.behind:hover {
+
+            transform: rotate(-4deg) translateY(8px) scale(1.05);
+
+            z-index: 3;
+        }
+
+
+        .app-preview.front:hover {
+
+            transform: rotate(4deg) scale(1.05);
+
+            z-index: 3;
         }
 
 
@@ -327,17 +367,17 @@
 
         .sparkle.one {
 
-            top: 5%;
+            top: 2%;
 
-            right: 18%;
+            left: 6%;
         }
 
 
         .sparkle.two {
 
-            bottom: 12%;
+            bottom: 8%;
 
-            right: 8%;
+            right: 4%;
 
             color: #ff8c4d;
         }
@@ -975,9 +1015,17 @@
 
             .app-preview {
 
-                width: 220px;
+                width: 180px;
 
-                height: 220px;
+                height: 180px;
+
+                border-radius: 42px;
+            }
+
+
+            .app-preview.behind {
+
+                margin-right: -20px;
             }
 
 
@@ -1181,12 +1229,26 @@
             </span>
 
 
-            <div class="app-preview">
+            <div class="app-stack">
 
-                <img
-                    src="StudyScan-icon.png"
-                    alt="StudyScan app icon"
-                >
+                <div class="app-preview behind">
+
+                    <img
+                        src="StudyScan-icon.png"
+                        alt="StudyScan app icon"
+                    >
+
+                </div>
+
+
+                <div class="app-preview front">
+
+                    <img
+                        src="Reisetips-icon.png"
+                        alt="Traveltips app icon"
+                    >
+
+                </div>
 
             </div>
 
