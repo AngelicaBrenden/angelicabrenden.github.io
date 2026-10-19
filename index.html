@@ -11,21 +11,18 @@
 
     <meta
         name="description"
-        content="Official website of Angelica Brenden, app developer and creator of StudyScan."
+        content="Official website of Angelica Brenden, app developer and creator of StudyScan, Traveltips and Discscan."
     >
 
     <style>
-
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
         html {
             scroll-behavior: smooth;
         }
-
         body {
             font-family:
                 -apple-system,
@@ -35,97 +32,55 @@
                 Helvetica,
                 Arial,
                 sans-serif;
-
             color: #17203a;
             background: #ffffff;
-
             line-height: 1.6;
         }
-
-
         /* =========================
            NAVIGATION
         ========================= */
-
         nav {
-
             position: sticky;
             top: 0;
-
             z-index: 1000;
-
             display: flex;
             justify-content: space-between;
             align-items: center;
-
             padding: 20px 7%;
-
             background: rgba(255, 255, 255, 0.92);
-
             backdrop-filter: blur(14px);
-
             border-bottom: 1px solid #f1e7eb;
         }
-
-
         .brand {
-
             font-size: 24px;
-
             font-weight: 700;
-
             color: #f33d91;
-
             letter-spacing: -1px;
         }
-
-
         nav .links {
-
             display: flex;
-
             gap: 35px;
         }
-
-
         nav a {
-
             text-decoration: none;
-
             color: #17203a;
-
             font-size: 15px;
-
             font-weight: 600;
-
             transition: 0.2s;
         }
-
-
         nav a:hover {
-
             color: #f33d91;
         }
-
-
         /* =========================
            HERO
         ========================= */
-
         .hero {
-
             min-height: 700px;
-
             padding: 90px 7%;
-
             display: flex;
-
             align-items: center;
-
             position: relative;
-
             overflow: hidden;
-
             background:
                 linear-gradient(
                     135deg,
@@ -135,103 +90,54 @@
                     #fff0d4 100%
                 );
         }
-
-
         .hero::after {
-
             content: "";
-
             position: absolute;
-
             bottom: -100px;
             left: -5%;
-
             width: 110%;
-
             height: 180px;
-
             background: white;
-
             border-radius: 50%;
         }
-
-
         .hero-content {
-
             width: 50%;
-
             max-width: 650px;
-
             position: relative;
-
             z-index: 2;
         }
-
-
         .eyebrow {
-
             margin-bottom: 18px;
-
             color: #f33d91;
-
             font-size: 16px;
-
             font-weight: 800;
-
             text-transform: uppercase;
-
             letter-spacing: 3px;
         }
-
-
         h1 {
-
             margin-bottom: 25px;
-
             font-family: Georgia, "Times New Roman", serif;
-
             font-size: clamp(55px, 7vw, 88px);
-
             line-height: 0.98;
-
             letter-spacing: -4px;
-
             color: #111a35;
         }
-
-
         .hero-text {
-
             max-width: 560px;
-
             color: #596074;
-
             font-size: 20px;
-
             line-height: 1.7;
         }
-
-
         .hero-button {
-
             display: inline-flex;
-
             align-items: center;
-
             gap: 15px;
-
             margin-top: 35px;
-
             padding: 15px 28px;
-
             border-radius: 50px;
-
             text-decoration: none;
-
             color: white;
-
             font-weight: 700;
-
             background:
                 linear-gradient(
                     90deg,
@@ -239,312 +145,171 @@
                     #ff765d,
                     #ffa43c
                 );
-
             box-shadow:
                 0 12px 30px rgba(243, 61, 145, 0.25);
-
             transition: 0.25s;
         }
-
-
         .hero-button:hover {
-
             transform: translateY(-3px);
-
             box-shadow:
                 0 16px 35px rgba(243, 61, 145, 0.3);
         }
-
-
         .arrow {
-
             font-size: 20px;
         }
-
-
         /* STUDYSCAN HERO */
-
         .hero-app {
-
             width: 50%;
-
             display: flex;
-
             justify-content: center;
-
             align-items: center;
-
             position: relative;
-
             z-index: 2;
         }
-
-
-        /* To ikoner som vifter litt fra hverandre. Ett ikon alene leste som
-           «appen min»; to sier at det er flere, uten å trenge en bildetekst. */
+        /* Tre ikoner i vifte. StudyScan står foran i midten, siden det er
+           den som er ute; de to andre lener seg ut til hver side. */
         .app-stack {
-
             display: flex;
-
             align-items: center;
-
             justify-content: center;
         }
-
-
         .app-preview {
-
-            width: 230px;
-
-            height: 230px;
-
-            border-radius: 54px;
-
+            width: 200px;
+            height: 200px;
+            border-radius: 47px;
             overflow: hidden;
-
             box-shadow:
                 0 30px 70px rgba(200, 80, 120, 0.25);
-
             transition: 0.3s;
         }
-
-
-        /* De to lener fra hverandre og overlapper så vidt. Mer overlapp
-           dekket halve StudyScan-ikonet — og det er den som faktisk er ute. */
-        .app-preview.behind {
-
-            margin-right: -26px;
-
-            transform: rotate(-7deg) translateY(14px);
-
-            z-index: 2;
-        }
-
-
-        .app-preview.front {
-
-            transform: rotate(7deg);
-
+        .app-preview.left {
+            margin-right: -34px;
+            transform: rotate(-10deg) translateY(18px);
             z-index: 1;
         }
-
-
-        .app-preview.behind:hover {
-
-            transform: rotate(-4deg) translateY(8px) scale(1.05);
-
+        .app-preview.middle {
+            z-index: 2;
+        }
+        .app-preview.right {
+            margin-left: -34px;
+            transform: rotate(10deg) translateY(18px);
+            z-index: 1;
+        }
+        .app-preview.left:hover {
+            transform: rotate(-7deg) translateY(10px) scale(1.05);
             z-index: 3;
         }
-
-
-        .app-preview.front:hover {
-
-            transform: rotate(4deg) scale(1.05);
-
+        .app-preview.middle:hover {
+            transform: scale(1.05);
             z-index: 3;
         }
-
-
+        .app-preview.right:hover {
+            transform: rotate(7deg) translateY(10px) scale(1.05);
+            z-index: 3;
+        }
         .app-preview img {
-
             width: 100%;
-
             height: 100%;
-
             object-fit: cover;
         }
-
-
         .sparkle {
-
             position: absolute;
-
             color: #f33d91;
-
             font-size: 38px;
         }
-
-
         .sparkle.one {
-
             top: 2%;
-
             left: 6%;
         }
-
-
         .sparkle.two {
-
             bottom: 8%;
-
             right: 4%;
-
             color: #ff8c4d;
         }
-
-
         /* =========================
            APPS
         ========================= */
-
         .apps-section {
-
             padding: 100px 7%;
-
             background: white;
         }
-
-
         .section-heading {
-
             max-width: 850px;
-
             margin: auto auto 50px;
-
             text-align: center;
         }
-
-
         .section-heading h2 {
-
             margin-bottom: 10px;
-
             font-family: Georgia, "Times New Roman", serif;
-
             font-size: 46px;
-
             letter-spacing: -1px;
-
             color: #111a35;
         }
-
-
         .section-heading p {
-
             color: #747b8c;
-
             font-size: 17px;
         }
-
-
         .apps-container {
-
             display: grid;
-
             gap: 30px;
-
             max-width: 1000px;
-
             margin: auto;
         }
-
-
         .app-card {
-
             display: grid;
-
             grid-template-columns: 170px 1fr 260px;
-
             gap: 40px;
-
             align-items: center;
-
             padding: 40px;
-
             background: white;
-
             border-radius: 28px;
-
             border: 1px solid #f0e5e9;
-
             box-shadow:
                 0 20px 50px rgba(38, 29, 45, 0.08);
-
             transition: 0.25s;
         }
-
-
         .app-card:hover {
-
             transform: translateY(-5px);
-
             box-shadow:
                 0 25px 60px rgba(38, 29, 45, 0.12);
         }
-
-
         .large-app-icon {
-
             width: 150px;
-
             height: 150px;
-
             border-radius: 35px;
-
             overflow: hidden;
-
             box-shadow:
                 0 12px 30px rgba(0, 0, 0, 0.12);
         }
-
-
         .large-app-icon img {
-
             width: 100%;
-
             height: 100%;
-
             object-fit: cover;
         }
-
-
         .app-info h3 {
-
             margin-bottom: 5px;
-
             font-family: Georgia, "Times New Roman", serif;
-
             font-size: 36px;
-
             color: #111a35;
         }
-
-
         .status {
-
             display: inline-block;
-
             margin-bottom: 15px;
-
             color: #f33d91;
-
             font-size: 14px;
-
             font-weight: 800;
         }
-
-
         .store-button {
-
             display: inline-flex;
-
             align-items: center;
-
             gap: 10px;
-
             margin-top: 22px;
-
             padding: 13px 26px;
-
             border-radius: 50px;
-
             text-decoration: none;
-
             color: white;
-
             font-size: 15px;
             font-weight: 700;
-
             background:
                 linear-gradient(
                     90deg,
@@ -552,72 +317,41 @@
                     #ff765d,
                     #ffa43c
                 );
-
             box-shadow:
                 0 10px 25px rgba(243, 61, 145, 0.25);
-
             transition: 0.25s;
         }
-
-
         .store-button:hover {
-
             transform: translateY(-3px);
-
             box-shadow:
                 0 14px 30px rgba(243, 61, 145, 0.3);
         }
-
-
         /* Apper som ikke er ute ennå. Dempet med vilje, så det ikke ser ut
            som en knapp man kan trykke på. */
         .status.soon {
-
             color: #8b7d86;
         }
-
-
         .soon-badge {
-
             display: inline-flex;
-
             align-items: center;
-
             gap: 10px;
-
             margin-top: 22px;
-
             padding: 13px 26px;
-
             border-radius: 50px;
-
             color: #8b7d86;
-
             font-size: 15px;
             font-weight: 700;
-
             background: #faf6f7;
-
             border: 1px dashed #e3d4da;
         }
-
-
         .app-info p {
-
             color: #687083;
-
             font-size: 16px;
-
             max-width: 500px;
         }
-
-
         .app-highlight {
-
             padding: 25px;
-
             border-radius: 20px;
-
             background:
                 linear-gradient(
                     135deg,
@@ -625,54 +359,30 @@
                     #fff1e6
                 );
         }
-
-
         .app-highlight h4 {
-
             margin-bottom: 12px;
-
             color: #f33d91;
-
             font-size: 15px;
         }
-
-
         .app-highlight ul {
-
             list-style: none;
         }
-
-
         .app-highlight li {
-
             margin: 8px 0;
-
             color: #596074;
-
             font-size: 14px;
         }
-
-
         .app-highlight li::before {
-
             content: "✓";
-
             margin-right: 8px;
-
             color: #f33d91;
-
             font-weight: 800;
         }
-
-
         /* =========================
            ABOUT
         ========================= */
-
         .about {
-
             padding: 110px 7%;
-
             background:
                 linear-gradient(
                     135deg,
@@ -680,151 +390,79 @@
                     #fff0e8
                 );
         }
-
-
         .about-container {
-
             max-width: 1050px;
-
             margin: auto;
-
             display: grid;
-
             grid-template-columns: 380px 1fr;
-
             gap: 80px;
-
             align-items: center;
         }
-
-
         .profile-photo {
-
             width: 360px;
-
             height: 420px;
-
             object-fit: cover;
-
             border-radius: 180px 180px 35px 35px;
-
             border: 5px solid white;
-
             box-shadow:
                 0 20px 50px rgba(214, 85, 130, 0.2);
         }
-
-
         .about-content h2 {
-
             margin-bottom: 20px;
-
             font-family: Georgia, "Times New Roman", serif;
-
             font-size: 46px;
-
             color: #111a35;
         }
-
-
         .about-content h2::before {
-
             content: "✦";
-
             margin-right: 14px;
-
             color: #f33d91;
-
             font-size: 28px;
         }
-
-
         .about-content > p {
-
             margin-bottom: 35px;
-
             color: #626a7b;
-
             font-size: 17px;
-
             line-height: 1.8;
         }
-
-
         .qualities {
-
             display: grid;
-
             grid-template-columns: repeat(3, 1fr);
-
             gap: 20px;
         }
-
-
         .quality {
-
             padding-right: 20px;
-
             border-right: 1px solid #f1cddc;
         }
-
-
         .quality:last-child {
-
             border-right: none;
         }
-
-
         .quality-icon {
-
             width: 50px;
-
             height: 50px;
-
             display: flex;
-
             align-items: center;
-
             justify-content: center;
-
             margin-bottom: 12px;
-
             border-radius: 15px;
-
             background: #ffe3ee;
-
             color: #f33d91;
-
             font-size: 23px;
         }
-
-
         .quality h4 {
-
             margin-bottom: 4px;
-
             color: #111a35;
         }
-
-
         .quality p {
-
             color: #707789;
-
             font-size: 13px;
-
             line-height: 1.5;
         }
-
-
         /* =========================
            SUPPORT
         ========================= */
-
         .support {
-
             padding: 70px 7%;
-
             background:
                 linear-gradient(
                     90deg,
@@ -832,319 +470,190 @@
                     #ff765d,
                     #ffa33c
                 );
-
             color: white;
         }
-
-
         .support-container {
-
             max-width: 1000px;
-
             margin: auto;
-
             display: flex;
-
             justify-content: space-between;
-
             align-items: center;
-
             gap: 30px;
         }
-
-
         .support-text h2 {
-
             margin-bottom: 5px;
-
             font-family: Georgia, "Times New Roman", serif;
-
             font-size: 35px;
         }
-
-
         .support-text p {
-
             opacity: 0.92;
         }
-
-
         .support-button {
-
             padding: 15px 27px;
-
             border-radius: 50px;
-
             background: white;
-
             color: #f33d91;
-
             text-decoration: none;
-
             font-weight: 800;
-
             white-space: nowrap;
-
             transition: 0.2s;
         }
-
-
         .support-button:hover {
-
             transform: translateY(-2px);
-
             box-shadow:
                 0 10px 25px rgba(0, 0, 0, 0.15);
         }
-
-
         /* =========================
            FOOTER
         ========================= */
-
         footer {
-
             padding: 35px 7%;
-
             background: white;
-
             border-top: 1px solid #eeeeee;
         }
-
-
         .footer-container {
-
             max-width: 1100px;
-
             margin: auto;
-
             display: flex;
-
             justify-content: space-between;
-
             align-items: center;
         }
-
-
         .footer-name {
-
             color: #f33d91;
-
             font-size: 22px;
-
             font-weight: 700;
         }
-
-
         .copyright {
-
             margin-top: 5px;
-
             color: #999;
-
             font-size: 13px;
         }
-
-
+        /* Seks lenker får ikke plass på én linje på smale skjermer; de bryter pent. */
+        .footer-links {
+            max-width: 620px;
+            text-align: right;
+            line-height: 2.2;
+        }
         .footer-links a {
-
+            display: inline-block;
             margin-left: 25px;
-
             color: #666;
-
             text-decoration: none;
-
             font-size: 14px;
         }
-
-
         .footer-links a:hover {
-
             color: #f33d91;
         }
-
-
         /* =========================
            MOBILE
         ========================= */
-
         @media (max-width: 850px) {
-
             nav {
-
                 padding: 18px 5%;
             }
-
-
             nav .links {
-
                 gap: 15px;
             }
-
-
             nav a {
-
                 font-size: 13px;
             }
-
-
             .hero {
-
                 padding: 70px 6% 120px;
-
                 flex-direction: column;
-
                 text-align: center;
-
                 gap: 60px;
             }
-
-
             .hero-content,
             .hero-app {
-
                 width: 100%;
             }
-
-
             .hero-text {
-
                 margin: auto;
             }
-
-
             .app-preview {
-
-                width: 180px;
-
-                height: 180px;
-
-                border-radius: 42px;
+                width: 130px;
+                height: 130px;
+                border-radius: 30px;
             }
-
-
-            .app-preview.behind {
-
-                margin-right: -20px;
+            .app-preview.left {
+                margin-right: -22px;
             }
-
-
+            .app-preview.right {
+                margin-left: -22px;
+            }
             .app-card {
-
                 grid-template-columns: 1fr;
-
                 text-align: center;
-
                 justify-items: center;
             }
-
-
             .app-info p {
-
                 margin: auto;
             }
-
-
             .app-highlight {
-
                 width: 100%;
-
                 text-align: left;
             }
-
-
             .about-container {
-
                 grid-template-columns: 1fr;
-
                 text-align: center;
-
                 gap: 50px;
             }
-
-
             .profile-photo {
-
                 width: 280px;
-
                 height: 330px;
-
                 margin: auto;
             }
-
-
             .qualities {
-
                 text-align: left;
             }
-
-
             .quality {
-
                 border-right: none;
-
                 border-bottom: 1px solid #f1cddc;
-
                 padding-bottom: 15px;
             }
-
-
             .support-container {
-
                 flex-direction: column;
-
                 text-align: center;
             }
-
-
             .footer-container {
-
                 flex-direction: column;
-
                 gap: 20px;
-
                 text-align: center;
             }
-
-
+            .footer-links {
+                text-align: center;
+            }
             .footer-links a {
-
                 margin: 0 10px;
             }
-
         }
-
-
         @media (max-width: 550px) {
-
+            .app-preview {
+                width: 104px;
+                height: 104px;
+                border-radius: 24px;
+            }
+            .app-preview.left {
+                margin-right: -18px;
+            }
+            .app-preview.right {
+                margin-left: -18px;
+            }
             h1 {
-
                 font-size: 55px;
-
                 letter-spacing: -2px;
             }
-
-
             .qualities {
-
                 grid-template-columns: 1fr;
             }
-
-
             .app-card {
-
                 padding: 25px;
             }
-
-
             .section-heading h2,
             .about-content h2 {
-
                 font-size: 38px;
             }
-
         }
-
     </style>
 
 </head>
@@ -1231,23 +740,16 @@
 
             <div class="app-stack">
 
-                <div class="app-preview behind">
-
-                    <img
-                        src="StudyScan-icon.png"
-                        alt="StudyScan app icon"
-                    >
-
+                <div class="app-preview left">
+                    <img src="Reisetips-icon.png" alt="Traveltips app icon">
                 </div>
 
+                <div class="app-preview middle">
+                    <img src="StudyScan-icon.png" alt="StudyScan app icon">
+                </div>
 
-                <div class="app-preview front">
-
-                    <img
-                        src="Reisetips-icon.png"
-                        alt="Traveltips app icon"
-                    >
-
+                <div class="app-preview right">
+                    <img src="Discscan-icon.png" alt="Discscan app icon">
                 </div>
 
             </div>
@@ -1442,6 +944,85 @@
 
             </div>
 
+
+
+            <div class="app-card">
+
+
+                <div class="large-app-icon">
+
+                    <img
+                        src="Discscan-icon.png"
+                        alt="Discscan app icon"
+                    >
+
+                </div>
+
+
+
+                <div class="app-info">
+
+                    <h3>
+                        Discscan
+                    </h3>
+
+
+                    <span class="status soon">
+                        In development
+                    </span>
+
+
+                    <p>
+
+                        Scan the stamp on a disc golf disc and see how it
+                        will fly &mdash; for your arm, not a pro's. Backhand or
+                        forehand, right or left hand, new or beaten-in plastic,
+                        and which disc in your bag to throw on the hole in
+                        front of you.
+
+                    </p>
+
+
+                    <span class="soon-badge">
+                        Coming soon to the App Store
+                    </span>
+
+                </div>
+
+
+
+                <div class="app-highlight">
+
+                    <h4>
+                        Throw smarter.
+                    </h4>
+
+
+                    <ul>
+
+                        <li>
+                            Scan a disc's stamp
+                        </li>
+
+                        <li>
+                            See its flight for your arm
+                        </li>
+
+                        <li>
+                            Pick a disc from the tee sign
+                        </li>
+
+                        <li>
+                            Learns from your own throws
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+            </div>
+
         </div>
 
     </section>
@@ -1624,6 +1205,14 @@
 
                 <a href="traveltips-support.html">
                     Traveltips support
+                </a>
+
+                <a href="discscan-privacy.html">
+                    Discscan privacy
+                </a>
+
+                <a href="discscan-support.html">
+                    Discscan support
                 </a>
 
                 <a href="#support">
