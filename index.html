@@ -511,38 +511,65 @@
             background: white;
             border-top: 1px solid #eeeeee;
         }
-        .footer-container {
+        /* Lenkene samlet i én kolonne per app; på én linje brøt de stygt. */
+        .foot {
             max-width: 1100px;
             margin: auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            display: grid;
+            grid-template-columns: 1.6fr repeat(3, 1fr);
+            gap: 40px;
+            align-items: start;
         }
-        .footer-name {
+        .foot-brand .footer-name {
             color: #f33d91;
             font-size: 22px;
             font-weight: 700;
         }
-        .copyright {
+        .foot-brand .copyright {
             margin-top: 5px;
             color: #999;
             font-size: 13px;
         }
-        /* Seks lenker får ikke plass på én linje på smale skjermer; de bryter pent. */
-        .footer-links {
-            max-width: 620px;
-            text-align: right;
-            line-height: 2.2;
-        }
-        .footer-links a {
+        .foot-contact {
             display: inline-block;
-            margin-left: 25px;
-            color: #666;
-            text-decoration: none;
-            font-size: 14px;
-        }
-        .footer-links a:hover {
+            margin-top: 14px;
             color: #f33d91;
+            font-size: 14px;
+            font-weight: 700;
+            text-decoration: none;
+        }
+        .foot-col h5 {
+            margin-bottom: 10px;
+            color: #111a35;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+        .foot-col a {
+            display: block;
+            margin: 6px 0;
+            color: #666;
+            font-size: 14px;
+            text-decoration: none;
+            transition: 0.2s;
+        }
+        .foot-col a:hover,
+        .foot-contact:hover {
+            color: #f33d91;
+        }
+        @media (max-width: 850px) {
+            .foot {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 30px 20px;
+            }
+            .foot-brand {
+                grid-column: 1 / -1;
+                text-align: center;
+            }
+            .foot-col {
+                text-align: center;
+            }
         }
         /* =========================
            MOBILE
@@ -614,17 +641,6 @@
             .support-container {
                 flex-direction: column;
                 text-align: center;
-            }
-            .footer-container {
-                flex-direction: column;
-                gap: 20px;
-                text-align: center;
-            }
-            .footer-links {
-                text-align: center;
-            }
-            .footer-links a {
-                margin: 0 10px;
             }
         }
         @media (max-width: 550px) {
@@ -1176,51 +1192,31 @@
 
     <footer>
 
-        <div class="footer-container">
+        <div class="foot">
 
-
-            <div>
-
-                <div class="footer-name">
-                    Angelica Brenden
-                </div>
-
-                <div class="copyright">
-                    © 2026 Angelica Brenden
-                </div>
-
+            <div class="foot-brand">
+                <div class="footer-name">Angelica Brenden</div>
+                <div class="copyright">© 2026 Angelica Brenden</div>
+                <a class="foot-contact" href="#support">Contact &rarr;</a>
             </div>
 
-
-
-            <div class="footer-links">
-
-                <a href="privacy.html">
-                    StudyScan privacy
-                </a>
-
-                <a href="traveltips-privacy.html">
-                    Traveltips privacy
-                </a>
-
-                <a href="traveltips-support.html">
-                    Traveltips support
-                </a>
-
-                <a href="discscan-privacy.html">
-                    Discscan privacy
-                </a>
-
-                <a href="discscan-support.html">
-                    Discscan support
-                </a>
-
-                <a href="#support">
-                    Contact
-                </a>
-
+            <div class="foot-col">
+                <h5>StudyScan</h5>
+                <a href="privacy.html">Privacy</a>
+                <a href="https://apps.apple.com/no/app/studyscan/id6808137141">App Store</a>
             </div>
 
+            <div class="foot-col">
+                <h5>Traveltips</h5>
+                <a href="traveltips-privacy.html">Privacy</a>
+                <a href="traveltips-support.html">Support</a>
+            </div>
+
+            <div class="foot-col">
+                <h5>Discscan</h5>
+                <a href="discscan-privacy.html">Privacy</a>
+                <a href="discscan-support.html">Support</a>
+            </div>
 
         </div>
 
